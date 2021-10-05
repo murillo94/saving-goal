@@ -7,5 +7,9 @@ module.exports = {
   transform: {
     '^.+\\.(ts|tsx)$': 'babel-jest',
   },
+  moduleNameMapper: {
+    '^theme(.*)$': '<rootDir>/src/theme$1',
+    '^components(.*)$': '<rootDir>/src/components$1',
+  },
   setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
 };
