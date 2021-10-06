@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 
-import { Text } from '../typography';
+import { Text } from '../../typography';
 
 describe('Text', () => {
   it('should be paragraph as default render', () => {

@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 
-import { Box } from '../box';
+import { Box } from '../../box';
 
 describe('Icon', () => {
   it('should have polymorphic as heading', () => {

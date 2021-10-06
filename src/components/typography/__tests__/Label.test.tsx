@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 
-import { Label } from '../typography';
+import { Label } from '../../typography';
 
 describe('Label', () => {
   it('should have input value', () => {

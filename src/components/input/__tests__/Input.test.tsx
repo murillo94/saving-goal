@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { render, fireEvent } from '@testing-library/react';
 
-import { Input } from '../input';
+import { Input } from '../../input';
 
 describe('Input', () => {
-  test('should render as textbox', () => {
+  it('should render as textbox', () => {
     const onValueChange = jest.fn();
     const { getByRole, getByText } = render(
       <Input name="amount" onValueChange={onValueChange} />,
@@ -14,7 +14,7 @@ describe('Input', () => {
     expect(getByText('Dollar sign')).toBeInTheDocument();
   });
 
-  test('should have aria label', () => {
+  it('should have aria label', () => {
     const onValueChange = jest.fn();
     const { getByLabelText } = render(
       <Input
@@ -27,7 +27,7 @@ describe('Input', () => {
     expect(getByLabelText('Type an amount to saving')).toBeInTheDocument();
   });
 
-  test('should have default value', () => {
+  it('should have default value', () => {
     const onValueChange = jest.fn();
     const { getByRole } = render(
       <Input name="amount" onValueChange={onValueChange} value="10000" />,
@@ -36,7 +36,7 @@ describe('Input', () => {
     expect(getByRole('textbox')).toHaveValue('10,000');
   });
 
-  test('should change the input value', () => {
+  it('should change the input value', () => {
     const onChange = jest.fn();
     const InputTest = () => {
       const [value, setValue] = useState('');
