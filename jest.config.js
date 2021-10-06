@@ -10,6 +10,8 @@ module.exports = {
   moduleNameMapper: {
     '^theme(.*)$': '<rootDir>/src/theme$1',
     '^components(.*)$': '<rootDir>/src/components$1',
+    '^utils(.*)$': '<rootDir>/src/utils$1',
+    '^hooks(.*)$': '<rootDir>/src/hooks$1',
   },
   setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
 };
