@@ -22,11 +22,15 @@ const InputStyled = styled('input', {
   borderRadius: '$1',
   p: '$2',
   pl: '$9',
+  outline: 'none',
   boxSizing: 'border-box',
   '&[type="number"], &[type="number"]::-webkit-inner-spin-button, &[type="number"]::-webkit-outer-spin-button':
     {
       appearance: 'textfield',
     },
+  '&:focus': {
+    boxShadow: '$2',
+  },
 });
 
 const Container = styled(Box, {

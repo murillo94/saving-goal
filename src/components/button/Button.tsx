@@ -7,6 +7,7 @@ export const Button = styled('button', {
   borderRadius: '$3',
   border: 'none',
   p: '$3',
+  outline: 'none',
   width: 'auto',
   cursor: 'pointer',
   variants: {
@@ -16,6 +17,9 @@ export const Button = styled('button', {
         backgroundColor: '$brandColorPrimary',
         '&:hover': {
           opacity: '0.9',
+        },
+        '&:focus': {
+          boxShadow: '$1',
         },
       },
     },
