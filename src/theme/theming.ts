@@ -25,7 +25,8 @@ export const THEME = {
     7: '35px',
     8: '40px',
     9: '45px',
-    10: '64px',
+    10: '56px',
+    11: '64px',
   },
   radii: { 1: '4px', 2: '8px', 3: '32px' },
   shadows: {
