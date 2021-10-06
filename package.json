@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@radix-ui/react-accessible-icon": "^0.1.0",
+    "@radix-ui/react-label": "^0.1.0",
     "@stitches/react": "^1.2.1",
     "babel-plugin-inline-react-svg": "^2.0.1",
     "next": "11.1.2",
