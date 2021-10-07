@@ -2,7 +2,6 @@ import { styled } from 'theme';
 import { COLORS } from './utils/colors';
 
 export const Text = styled('p', {
-  fontFamily: '$workSans',
   margin: '0',
   variants: {
     appearance: COLORS,
@@ -33,7 +32,7 @@ export const Text = styled('p', {
       },
       xxlarge: {
         fontSize: '$7',
-        lineHeight: '38.4px',
+        lineHeight: '38px',
       },
     },
     weight: {
@@ -47,10 +46,19 @@ export const Text = styled('p', {
         fontWeight: '$3',
       },
     },
+    font: {
+      workSans: {
+        fontFamily: '$workSans',
+      },
+      rubik: {
+        fontFamily: '$rubik',
+      },
+    },
   },
   defaultVariants: {
     appearance: 'primary',
     size: 'medium',
     weight: 'initial',
+    font: 'workSans',
   },
 });
