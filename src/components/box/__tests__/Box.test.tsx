@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 
 import { Box } from '../../box';
 
-describe('Icon', () => {
+describe('Box', () => {
   it('should have polymorphic as heading', () => {
     const { getByRole } = render(<Box as="h1">title</Box>);
 
