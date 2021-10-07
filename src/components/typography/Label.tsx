@@ -14,6 +14,6 @@ export const Label = styled(LabelRadix.Root, {
     appearance: COLORS,
   },
   defaultVariants: {
-    appearance: 'primary',
+    appearance: 'gray900',
   },
 });
