@@ -54,11 +54,23 @@ export const Text = styled('p', {
         fontFamily: '$rubik',
       },
     },
+    align: {
+      left: {
+        textAlign: 'left',
+      },
+      center: {
+        textAlign: 'center',
+      },
+      right: {
+        textAlign: 'right',
+      },
+    },
   },
   defaultVariants: {
     appearance: 'primary',
     size: 'medium',
     weight: 'initial',
     font: 'workSans',
+    align: 'left',
   },
 });
