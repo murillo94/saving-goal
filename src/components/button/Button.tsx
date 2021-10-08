@@ -8,7 +8,6 @@ export const Button = styled('button', {
   border: 'none',
   p: '$3',
   outline: 'none',
-  width: 'auto',
   cursor: 'pointer',
   variants: {
     appearance: {
@@ -23,8 +22,20 @@ export const Button = styled('button', {
         },
       },
     },
+    width: {
+      default: {
+        width: '320px',
+        '@small': {
+          width: '100%',
+        },
+      },
+      fill: {
+        width: '100%',
+      },
+    },
   },
   defaultVariants: {
     appearance: 'default',
+    width: 'default',
   },
 });

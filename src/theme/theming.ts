@@ -14,7 +14,11 @@ export const THEME = {
     6: '24px',
     7: '32px',
   },
-  fontWeights: { 1: '400', 2: '500', 3: '600' },
+  fontWeights: {
+    1: '400',
+    2: '500',
+    3: '600',
+  },
   space: {
     1: '4px',
     2: '12px',

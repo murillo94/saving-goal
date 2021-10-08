@@ -1,3 +1,3 @@
 export const MEDIA = {
-  small: '(min-width: 480px)',
+  small: '(max-width: 600px)',
 };
