@@ -4,7 +4,7 @@ import { styled } from 'theme';
 const HeaderStyled = styled('header', {
   backgroundColor: '$neutralWhite',
   py: '$4',
-  px: '$10',
+  px: '$11',
 });
 
 export const Header = () => (
