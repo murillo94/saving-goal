@@ -10,25 +10,25 @@ describe('date', () => {
     jest.useRealTimers();
   });
 
-  it('add a month on date', () => {
+  it('should add a month on date', () => {
     const month = addMonth(new Date(), 1).toDateString();
 
     expect(month).toBe('Mon Mar 01 2021');
   });
 
-  it('sub a month on date', () => {
+  it('should sub a month on date', () => {
     const month = subMonth(new Date(), 3).toDateString();
 
     expect(month).toBe('Sun Nov 01 2020');
   });
 
-  it('get month on date', () => {
+  it('should get month on date', () => {
     const month = getMonth(new Date());
 
     expect(month).toBe('February');
   });
 
-  it('get year on date', () => {
+  it('should get year on date', () => {
     const month = getYear(new Date());
 
     expect(month).toBe(2021);
