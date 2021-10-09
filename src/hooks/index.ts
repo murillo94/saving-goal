@@ -1,1 +1,1 @@
-export * from './use-month';
+export * from './useMonth';

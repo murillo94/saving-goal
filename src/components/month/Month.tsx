@@ -4,7 +4,7 @@ import { Text } from '../typography';
 import { Icon } from '../icon';
 
 import { styled } from 'theme';
-import { useMonth } from 'hooks/use-month';
+import { useMonth } from 'hooks';
 
 const ToggleGroup = styled(ToggleGroupPrimitive.Root, {
   display: 'inline-flex',

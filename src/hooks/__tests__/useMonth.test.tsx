@@ -1,6 +1,6 @@
 import { renderHook, act } from '@testing-library/react-hooks';
 
-import { useMonth } from '../use-month';
+import { useMonth } from '../useMonth';
 
 const onChange = jest.fn();
 
