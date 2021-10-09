@@ -4,16 +4,10 @@ import { Label } from '../../typography';
 
 describe('Label', () => {
   it('should have input value', () => {
-    const { getByLabelText, getByTestId } = render(
+    const { getByLabelText } = render(
       <>
         <Label htmlFor="amount">Type an amount to saving</Label>
-        <input
-          id="amount"
-          name="amount"
-          data-testid="input-to-focus"
-          value="input-value"
-          readOnly
-        />
+        <input id="amount" name="amount" value="input-value" readOnly />
       </>,
     );
 
