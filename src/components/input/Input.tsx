@@ -15,6 +15,7 @@ const InputStyled = styled('input', {
   fontFamily: '$rubik',
   fontSize: '$6',
   fontWeight: '$2',
+  lineHeight: '28.8px',
   color: '$blueGray600',
   borderWidth: '1px',
   borderStyle: 'solid',
@@ -25,6 +26,11 @@ const InputStyled = styled('input', {
   outline: 'none',
   boxSizing: 'border-box',
   width: '100%',
+  height: '56px',
+  '@small': {
+    fontSize: '$5',
+    lineHeight: '24px',
+  },
   '&[type="number"], &[type="number"]::-webkit-inner-spin-button, &[type="number"]::-webkit-outer-spin-button':
     {
       appearance: 'textfield',
