@@ -8,7 +8,9 @@ import {
 
 describe('date', () => {
   beforeEach(() => {
-    jest.useFakeTimers('modern').setSystemTime(new Date(2021, 1, 1, 7));
+    jest
+      .useFakeTimers('modern')
+      .setSystemTime(new Date(Date.UTC(2021, 1, 1, 7, 0, 0, 0)));
   });
 
   afterEach(() => {

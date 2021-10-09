@@ -6,7 +6,9 @@ const onChange = jest.fn();
 
 describe('useMonth', () => {
   beforeEach(() => {
-    jest.useFakeTimers('modern').setSystemTime(new Date(2020, 5, 1, 7));
+    jest
+      .useFakeTimers('modern')
+      .setSystemTime(new Date(Date.UTC(2020, 5, 1, 7, 0, 0, 0)));
     jest.clearAllMocks();
   });
 
