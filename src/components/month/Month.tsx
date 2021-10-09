@@ -6,7 +6,7 @@ import { Icon } from '../icon';
 import { styled } from 'theme';
 import { useMonth } from 'hooks/use-month';
 
-const StyledToggleGroup = styled(ToggleGroupPrimitive.Root, {
+const ToggleGroup = styled(ToggleGroupPrimitive.Root, {
   display: 'inline-flex',
   backgroundColor: '$neutralWhite',
   borderWidth: '1px',
@@ -15,10 +15,12 @@ const StyledToggleGroup = styled(ToggleGroupPrimitive.Root, {
   borderRadius: '$1',
   p: '$1',
   boxSizing: 'border-box',
+  minWidth: '202px',
   width: '100%',
+  height: '56px',
 });
 
-const StyledItem = styled(ToggleGroupPrimitive.Item, {
+const Item = styled(ToggleGroupPrimitive.Item, {
   all: 'unset',
   backgroundColor: '$neutralWhite',
   display: 'flex',
@@ -46,44 +48,45 @@ const StyledItem = styled(ToggleGroupPrimitive.Item, {
 });
 
 interface Props {
+  initialValue: Date;
   onChange?: (value: Date) => void;
 }
 
-export const Month = ({ onChange }: Props) => {
+export const Month = ({ initialValue, onChange }: Props) => {
   const { month, year, handleDownMonth, handleUpMonth, handleKeyDown } =
-    useMonth({ onChange });
+    useMonth({ initialValue, onChange });
 
   return (
-    <StyledToggleGroup
+    <ToggleGroup
       type="single"
       aria-label="Select a month"
       orientation="horizontal"
       loop={false}
     >
-      <StyledItem
+      <Item
         value="left"
         aria-label="Down month"
         onClick={handleDownMonth}
         onKeyDown={handleKeyDown}
       >
         <Icon name="chevron-left" label="Arrow left" />
-      </StyledItem>
-      <StyledItem value="month" aria-label="Month" disabled>
+      </Item>
+      <Item value="month" aria-label="Month" disabled>
         <Text appearance="gray900" weight="semiBold">
           {month}
         </Text>
         <Text appearance="gray400" size="small">
           {year}
         </Text>
-      </StyledItem>
-      <StyledItem
+      </Item>
+      <Item
         value="right"
         aria-label="Up month"
         onClick={handleUpMonth}
         onKeyDown={handleKeyDown}
       >
         <Icon name="chevron-right" label="Arrow right" />
-      </StyledItem>
-    </StyledToggleGroup>
+      </Item>
+    </ToggleGroup>
   );
 };

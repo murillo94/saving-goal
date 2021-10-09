@@ -1,21 +1,21 @@
-import { useState, useRef, KeyboardEvent } from 'react';
+import { useState, KeyboardEvent } from 'react';
 
 import { addMonth, subMonth, getMonth, getYear } from 'utils';
 
 interface Props {
+  initialValue: Date;
   onChange?: (value: Date) => void;
 }
 
-export const useMonth = ({ onChange }: Props) => {
-  const fixedMonth = useRef(new Date());
-  const [timestamp, setTimestamp] = useState(fixedMonth.current);
+export const useMonth = ({ initialValue, onChange }: Props) => {
+  const [timestamp, setTimestamp] = useState(initialValue);
   const month = getMonth(timestamp);
   const year = getYear(timestamp);
 
   const handleDownMonth = () => {
     const value = subMonth(timestamp, 1);
 
-    if (fixedMonth.current <= value) {
+    if (initialValue <= value) {
       setTimestamp(value);
       onChange?.(value);
     }
