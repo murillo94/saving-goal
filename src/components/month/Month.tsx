@@ -15,6 +15,7 @@ const StyledToggleGroup = styled(ToggleGroupPrimitive.Root, {
   borderRadius: '$1',
   p: '$1',
   boxSizing: 'border-box',
+  width: '100%',
 });
 
 const StyledItem = styled(ToggleGroupPrimitive.Item, {
@@ -30,6 +31,10 @@ const StyledItem = styled(ToggleGroupPrimitive.Item, {
     marginLeft: 0,
     borderTopLeftRadius: '$1',
     borderBottomLeftRadius: '$1',
+  },
+  '&:not(:first-child):not(:last-child)': {
+    width: '100%',
+    cursor: 'auto',
   },
   '&:last-child': { borderTopRightRadius: '$1', borderBottomRightRadius: '$1' },
   '&:hover:enabled': { backgroundColor: '$blueGray50' },
@@ -64,10 +69,10 @@ export const Month = ({ onChange }: Props) => {
         <Icon name="chevron-left" label="Arrow left" />
       </StyledItem>
       <StyledItem value="month" aria-label="Month" disabled>
-        <Text appearance="gray900" size="small" weight="semiBold">
+        <Text appearance="gray900" weight="semiBold">
           {month}
         </Text>
-        <Text appearance="gray400" size="xsmall">
+        <Text appearance="gray400" size="small">
           {year}
         </Text>
       </StyledItem>

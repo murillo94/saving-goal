@@ -9,6 +9,7 @@ export const Card = styled('div', {
         borderWidth: '1px',
         borderStyle: 'solid',
         borderColor: '$blueGray50',
+        overflow: 'auto',
       },
       shadow: {
         boxShadow: '$3',

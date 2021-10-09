@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { styled } from 'theme';
 
 const HeaderStyled = styled('header', {
@@ -7,14 +6,17 @@ const HeaderStyled = styled('header', {
   px: '$11',
 });
 
+const Image = styled('img', {
+  width: '100px',
+  height: '32px',
+  '@small': {
+    width: '75px',
+    height: '24px',
+  },
+});
+
 export const Header = () => (
   <HeaderStyled>
-    <Image
-      src="/logo.png"
-      alt="Origin logo"
-      width={100}
-      height={32}
-      loading="lazy"
-    />
+    <Image src="/logo.png" alt="Origin logo" />
   </HeaderStyled>
 );

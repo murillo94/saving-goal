@@ -24,6 +24,7 @@ const InputStyled = styled('input', {
   pl: '$9',
   outline: 'none',
   boxSizing: 'border-box',
+  width: '100%',
   '&[type="number"], &[type="number"]::-webkit-inner-spin-button, &[type="number"]::-webkit-outer-spin-button':
     {
       appearance: 'textfield',

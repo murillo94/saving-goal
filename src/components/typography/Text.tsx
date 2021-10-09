@@ -1,38 +1,56 @@
 import { styled } from 'theme';
 import { COLORS } from './utils/colors';
 
+// ajustar responsivo
+
 export const Text = styled('p', {
   margin: '0',
   variants: {
     appearance: COLORS,
     size: {
-      xxsmall: {
+      xsmall: {
         fontSize: '$1',
         lineHeight: '16px',
       },
-      xsmall: {
+      small: {
         fontSize: '$2',
         lineHeight: '21px',
-      },
-      small: {
-        fontSize: '$3',
-        lineHeight: '24px',
+        '@small': {
+          fontSize: '$1',
+          lineHeight: '16px',
+        },
       },
       medium: {
-        fontSize: '$4',
-        lineHeight: '21.6px',
+        fontSize: '$3',
+        lineHeight: '24px',
+        '@small': {
+          fontSize: '$2',
+          lineHeight: '21px',
+        },
       },
       large: {
         fontSize: '$5',
         lineHeight: '24px',
+        '@small': {
+          fontSize: '$4',
+          lineHeight: '21.6px',
+        },
       },
       xlarge: {
         fontSize: '$6',
         lineHeight: '28.8px',
+        '@small': {
+          fontSize: '$5',
+          lineHeight: '24px',
+        },
       },
       xxlarge: {
         fontSize: '$7',
         lineHeight: '38px',
+        '@small': {
+          fontSize: '$6',
+          lineHeight: '28.8px',
+        },
       },
     },
     weight: {
