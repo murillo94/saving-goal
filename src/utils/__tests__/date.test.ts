@@ -1,4 +1,10 @@
-import { addMonth, subMonth, getMonth, getYear } from 'utils';
+import {
+  addMonth,
+  subMonth,
+  getMonth,
+  getYear,
+  distanceBetweenDates,
+} from 'utils';
 
 describe('date', () => {
   beforeEach(() => {
@@ -32,5 +38,14 @@ describe('date', () => {
     const month = getYear(new Date());
 
     expect(month).toBe(2021);
+  });
+
+  it('should get diference between dates', () => {
+    const month = distanceBetweenDates(
+      new Date(2014, 0, 31),
+      new Date(2014, 8, 1),
+    );
+
+    expect(month).toBe(8);
   });
 });
