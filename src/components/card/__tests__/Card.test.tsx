@@ -8,7 +8,7 @@ describe('Card', () => {
 
     const card = getByText('card');
 
-    expect(card).toHaveClass('c-kJRIxC-doYUvR-appearance-border');
+    expect(card).toHaveClass('c-kJRIxC c-kJRIxC-gEVGHw-appearance-border');
   });
 
   it('should have variant as shadow', () => {

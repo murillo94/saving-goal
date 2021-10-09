@@ -16,7 +16,9 @@ describe('useMonth', () => {
   });
 
   it('should render default values', () => {
-    const { result } = renderHook(() => useMonth({}));
+    const { result } = renderHook(() =>
+      useMonth({ initialValue: new Date(2020, 5, 1, 7) }),
+    );
 
     expect(result.current.month).toBe('June');
     expect(result.current.year).toBe(2020);
@@ -24,7 +26,9 @@ describe('useMonth', () => {
 
   describe('handleDownMonth', () => {
     it('should down month value without setter', () => {
-      const { result } = renderHook(() => useMonth({}));
+      const { result } = renderHook(() =>
+        useMonth({ initialValue: new Date(2020, 5, 1, 7) }),
+      );
 
       act(() => {
         result.current.handleUpMonth();
@@ -38,7 +42,9 @@ describe('useMonth', () => {
     });
 
     it('should down month value with setter', () => {
-      const { result } = renderHook(() => useMonth({ onChange }));
+      const { result } = renderHook(() =>
+        useMonth({ initialValue: new Date(2020, 5, 1, 7), onChange }),
+      );
 
       act(() => {
         result.current.handleUpMonth();
@@ -52,7 +58,9 @@ describe('useMonth', () => {
     });
 
     it('should not down month value when month is past', () => {
-      const { result } = renderHook(() => useMonth({}));
+      const { result } = renderHook(() =>
+        useMonth({ initialValue: new Date(2020, 5, 1, 7) }),
+      );
 
       act(() => {
         result.current.handleDownMonth();
@@ -65,7 +73,9 @@ describe('useMonth', () => {
 
   describe('handleUpMonth', () => {
     it('should up month value without setter', () => {
-      const { result } = renderHook(() => useMonth({}));
+      const { result } = renderHook(() =>
+        useMonth({ initialValue: new Date(2020, 5, 1, 7) }),
+      );
 
       act(() => {
         result.current.handleUpMonth();
@@ -77,7 +87,9 @@ describe('useMonth', () => {
     });
 
     it('should up month value with setter', () => {
-      const { result } = renderHook(() => useMonth({ onChange }));
+      const { result } = renderHook(() =>
+        useMonth({ initialValue: new Date(2020, 5, 1, 7), onChange }),
+      );
 
       act(() => {
         result.current.handleUpMonth();
@@ -91,7 +103,9 @@ describe('useMonth', () => {
 
   describe('handleKeyDown', () => {
     it('should down month on key down arrow left', () => {
-      const { result } = renderHook(() => useMonth({}));
+      const { result } = renderHook(() =>
+        useMonth({ initialValue: new Date(2020, 5, 1, 7) }),
+      );
 
       act(() => {
         result.current.handleUpMonth();
@@ -106,7 +120,9 @@ describe('useMonth', () => {
     });
 
     it('should not down month when key type is keydown', () => {
-      const { result } = renderHook(() => useMonth({}));
+      const { result } = renderHook(() =>
+        useMonth({ initialValue: new Date(2020, 5, 1, 7) }),
+      );
 
       act(() => {
         // @ts-ignore
@@ -119,7 +135,9 @@ describe('useMonth', () => {
     });
 
     it('should up month on key down right left', () => {
-      const { result } = renderHook(() => useMonth({}));
+      const { result } = renderHook(() =>
+        useMonth({ initialValue: new Date(2020, 5, 1, 7) }),
+      );
 
       act(() => {
         // @ts-ignore
@@ -132,7 +150,9 @@ describe('useMonth', () => {
     });
 
     it('should not up month when key type is keydown', () => {
-      const { result } = renderHook(() => useMonth({}));
+      const { result } = renderHook(() =>
+        useMonth({ initialValue: new Date(2020, 5, 1, 7) }),
+      );
 
       act(() => {
         // @ts-ignore
