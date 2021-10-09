@@ -4,6 +4,8 @@ import CurrencyInputField, {
 
 import { Box, Icon } from 'components';
 
+import { optionsCurrency } from 'utils';
+
 import { styled } from 'theme';
 
 type Props = Omit<CurrencyInputProps, 'onValueChange'> & {
@@ -63,9 +65,8 @@ export const Input = ({ id, name, ariaLabel, value, onValueChange }: Props) => (
       value={value}
       defaultValue=""
       allowNegativeValue={false}
-      groupSeparator=","
-      decimalSeparator="."
       onValueChange={onValueChange}
+      {...optionsCurrency}
     />
   </Container>
 );
