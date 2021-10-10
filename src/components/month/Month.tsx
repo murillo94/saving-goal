@@ -69,7 +69,7 @@ export const Month = ({ initialValue, onChange }: Props) => {
   return (
     <ToggleGroup
       type="single"
-      aria-label="Select a month"
+      aria-label="Reach goal by"
       orientation="horizontal"
       loop={false}
     >
