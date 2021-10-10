@@ -108,7 +108,9 @@ const Home: NextPage = () => {
             />
           </Amount>
           <Box>
-            <Label htmlFor="reachDate">Reach goal by</Label>
+            <Text size="small" appearance="gray900">
+              Reach goal by
+            </Text>
             <Month initialValue={initialMonth} onChange={handleReachDate} />
           </Box>
         </Inline>
