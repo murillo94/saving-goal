@@ -1,6 +1,6 @@
 import { render, fireEvent } from '@testing-library/react';
 
-import Home from '../index';
+import Home from '../index.page';
 
 describe('Button', () => {
   beforeEach(() => {
