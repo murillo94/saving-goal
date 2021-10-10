@@ -15,7 +15,7 @@ const ToggleGroup = styled(ToggleGroupPrimitive.Root, {
   borderRadius: '$1',
   p: '$1',
   boxSizing: 'border-box',
-  minWidth: '202px',
+  minWidth: '220px',
   width: '100%',
   height: '56px',
 });
@@ -27,7 +27,8 @@ const Item = styled(ToggleGroupPrimitive.Item, {
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
-  marginLeft: '$5',
+  ml: '$4',
+  p: '$1',
   cursor: 'pointer',
   '&:first-child': {
     marginLeft: 0,
@@ -38,12 +39,21 @@ const Item = styled(ToggleGroupPrimitive.Item, {
     width: '100%',
     cursor: 'auto',
   },
-  '&:last-child': { borderTopRightRadius: '$1', borderBottomRightRadius: '$1' },
-  '&:hover:enabled': { backgroundColor: '$blueGray50' },
+  '&:last-child': {
+    borderTopRightRadius: '$1',
+    borderBottomRightRadius: '$1',
+  },
+  '&:hover:enabled': {
+    backgroundColor: '$blueGray50',
+  },
   '&:focus': {
     position: 'relative',
     boxShadow: '$2',
     backgroundColor: '$blueGray50',
+  },
+  '@small': {
+    py: '$1',
+    px: '$2',
   },
 });
 

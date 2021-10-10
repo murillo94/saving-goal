@@ -29,16 +29,16 @@ const InputStyled = styled('input', {
   boxSizing: 'border-box',
   width: '100%',
   height: '56px',
-  '@small': {
-    fontSize: '$5',
-    lineHeight: '24px',
-  },
   '&[type="number"], &[type="number"]::-webkit-inner-spin-button, &[type="number"]::-webkit-outer-spin-button':
     {
       appearance: 'textfield',
     },
   '&:focus': {
     boxShadow: '$2',
+  },
+  '@small': {
+    fontSize: '$5',
+    lineHeight: '24px',
   },
 });
 

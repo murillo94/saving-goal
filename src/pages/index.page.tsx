@@ -113,11 +113,26 @@ const Home: NextPage = () => {
           </Box>
         </Inline>
         <Card css={{ mb: '$6' }}>
-          <Inline spaceX="between" responsive={false} css={{ p: '$6' }}>
-            <Text appearance="gray900" size="large" css={{ minWidth: '180px' }}>
+          <Inline
+            spaceX="between"
+            responsive={false}
+            css={{
+              p: '$6',
+              '@small': {
+                py: '$6',
+                px: '$4',
+              },
+            }}
+          >
+            <Text appearance="gray900" size="large" css={{ px: '$1' }}>
               Monthly amount
             </Text>
-            <Text appearance="secondary" size="xxlarge" weight="semiBold">
+            <Text
+              appearance="secondary"
+              size="xxlarge"
+              weight="semiBold"
+              css={{ px: '$1' }}
+            >
               {formatMonthlyAmount}
             </Text>
           </Inline>

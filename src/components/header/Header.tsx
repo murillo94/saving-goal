@@ -4,6 +4,9 @@ const HeaderStyled = styled('header', {
   backgroundColor: '$neutralWhite',
   py: '$4',
   px: '$11',
+  '@small': {
+    px: '$3',
+  },
 });
 
 const Image = styled('img', {
