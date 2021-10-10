@@ -10,6 +10,10 @@ export const Label = styled(LabelRadix.Root, {
   lineHeight: '21px',
   textAlign: 'left',
   display: 'block',
+  '@small': {
+    fontSize: '$1',
+    lineHeight: '16px',
+  },
   variants: {
     appearance: COLORS,
   },
