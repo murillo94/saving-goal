@@ -14,6 +14,7 @@ type Props = Omit<CurrencyInputProps, 'onValueChange'> & {
 };
 
 const InputStyled = styled('input', {
+  all: 'unset',
   fontFamily: '$rubik',
   fontSize: '$6',
   fontWeight: '$2',

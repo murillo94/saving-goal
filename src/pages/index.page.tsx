@@ -98,7 +98,9 @@ const Home: NextPage = () => {
         </Inline>
         <Inline spaceY="initial" css={{ mb: '$4' }}>
           <Amount>
-            <Label htmlFor="amount">Total amount</Label>
+            <Label htmlFor="amount" css={{ mb: '$1' }}>
+              Total amount
+            </Label>
             <Input
               id="amount"
               name="amount"
@@ -108,7 +110,7 @@ const Home: NextPage = () => {
             />
           </Amount>
           <Box>
-            <Text size="small" appearance="gray900">
+            <Text size="small" appearance="gray900" css={{ mb: '$1' }}>
               Reach goal by
             </Text>
             <Month initialValue={initialMonth} onChange={handleReachDate} />
