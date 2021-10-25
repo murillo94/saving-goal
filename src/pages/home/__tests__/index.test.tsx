@@ -4,8 +4,10 @@ import Home from '../index.page';
 
 describe('Home', () => {
   it('should render', () => {
-    const { getByText } = render(<Home />);
+    const { getByRole } = render(<Home />);
 
-    expect(getByText('Hello word')).toBeInTheDocument();
+    const heading = getByRole('heading');
+
+    expect(heading).toHaveTextContent('Here are your savings goals!');
   });
 });
