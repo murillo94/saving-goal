@@ -20,9 +20,9 @@ describe('useHome', () => {
 
     expect(result.current.goalDate).toBe('June 2022.');
     expect(result.current.distanceDates).toBe(1);
-    expect(result.current.amount).toBe('25000');
-    expect(result.current.formatAmount).toBe('$25,000');
-    expect(result.current.formatMonthlyAmount).toBe('$25,000');
+    expect(result.current.amount).toBe('');
+    expect(result.current.formatAmount).toBe('$0');
+    expect(result.current.formatMonthlyAmount).toBe('$0');
   });
 
   describe('handleAmount', () => {
@@ -48,7 +48,7 @@ describe('useHome', () => {
 
       expect(result.current.goalDate).toBe('June 2022.');
       expect(result.current.distanceDates).toBe(1);
-      expect(result.current.formatMonthlyAmount).toBe('$25,000');
+      expect(result.current.formatMonthlyAmount).toBe('$0');
     });
   });
 
@@ -65,7 +65,7 @@ describe('useHome', () => {
       expect(window.alert).toBeCalledWith(
         JSON.stringify(
           {
-            amount: '25000',
+            amount: '',
             reachDate: '2022-06-01T07:00:00.000Z',
           },
           null,
