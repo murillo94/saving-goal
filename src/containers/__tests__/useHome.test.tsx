@@ -2,6 +2,8 @@ import { renderHook, act } from '@testing-library/react-hooks';
 
 import { useHome } from '../useHome';
 
+import { INFO_GOALS } from 'persistence';
+
 describe('useHome', () => {
   beforeEach(() => {
     jest
@@ -53,8 +55,6 @@ describe('useHome', () => {
   });
 
   describe('handleSubmit', () => {
-    jest.spyOn(window, 'alert').mockImplementation(() => {});
-
     it('should submit values on alert', () => {
       const { result } = renderHook(() => useHome());
 
@@ -62,15 +62,18 @@ describe('useHome', () => {
         result.current.handleSubmit();
       });
 
-      expect(window.alert).toBeCalledWith(
-        JSON.stringify(
-          {
-            amount: '',
-            reachDate: '2022-06-01T07:00:00.000Z',
+      expect(localStorage.setItem).toBeCalledWith(
+        'goals',
+        JSON.stringify({
+          ...INFO_GOALS,
+          'buy-a-house': {
+            title: INFO_GOALS['buy-a-house'].title,
+            goal: {
+              amount: '',
+              reachDate: '2022-06-01T07:00:00.000Z',
+            },
           },
-          null,
-          2,
-        ),
+        }),
       );
     });
   });

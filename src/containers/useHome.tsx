@@ -27,15 +27,21 @@ export const useHome = () => {
   };
 
   const handleSubmit = () => {
-    alert(
-      JSON.stringify(
-        {
-          amount,
-          reachDate,
+    const goals = localStorage.getItem('goals');
+    const persistedGoals = goals ? JSON.parse(goals) : INFO_GOALS;
+
+    localStorage.setItem(
+      'goals',
+      JSON.stringify({
+        ...persistedGoals,
+        'buy-a-house': {
+          title: INFO_GOALS['buy-a-house'].title,
+          goal: {
+            amount,
+            reachDate,
+          },
         },
-        null,
-        2,
-      ),
+      }),
     );
   };
 
@@ -44,9 +50,10 @@ export const useHome = () => {
     const persistedGoals = goals ? JSON.parse(goals) : INFO_GOALS;
     const amount = persistedGoals['buy-a-house'].goal.amount;
     const reachDate = persistedGoals['buy-a-house'].goal.reachDate;
+    const formatReachDate = reachDate ? new Date(reachDate) : initialMonth;
 
     setAmount(amount);
-    setReachDate(reachDate || initialMonth);
+    setReachDate(formatReachDate);
   }, []);
 
   return {
