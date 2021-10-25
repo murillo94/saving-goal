@@ -1,5 +1,6 @@
 module.exports = {
   roots: ['<rootDir>'],
+  resetMocks: false,
   testEnvironment: 'jsdom',
   moduleFileExtensions: [
     'ts',
@@ -23,5 +24,8 @@ module.exports = {
     '^containers(.*)$': '<rootDir>/src/containers$1',
     '^persistence(.*)$': '<rootDir>/src/persistence$1',
   },
-  setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
+  setupFilesAfterEnv: [
+    '@testing-library/jest-dom/extend-expect',
+    'jest-localstorage-mock',
+  ],
 };
