@@ -21,6 +21,7 @@ module.exports = {
     '^utils(.*)$': '<rootDir>/src/utils$1',
     '^hooks(.*)$': '<rootDir>/src/hooks$1',
     '^containers(.*)$': '<rootDir>/src/containers$1',
+    '^persistence(.*)$': '<rootDir>/src/persistence$1',
   },
   setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
 };
