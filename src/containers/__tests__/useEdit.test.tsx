@@ -1,10 +1,10 @@
 import { renderHook, act } from '@testing-library/react-hooks';
 
-import { useHome } from '../useHome';
+import { useEdit } from '../useEdit';
 
 import { INFO_GOALS } from 'persistence';
 
-describe('useHome', () => {
+describe('useEdit', () => {
   beforeEach(() => {
     jest
       .useFakeTimers('modern')
@@ -18,7 +18,7 @@ describe('useHome', () => {
   });
 
   it('should render default values', () => {
-    const { result } = renderHook(() => useHome());
+    const { result } = renderHook(() => useEdit());
 
     expect(result.current.goalDate).toBe('June 2022.');
     expect(result.current.distanceDates).toBe(1);
@@ -29,7 +29,7 @@ describe('useHome', () => {
 
   describe('handleAmount', () => {
     it('should change amount value', () => {
-      const { result } = renderHook(() => useHome());
+      const { result } = renderHook(() => useEdit());
 
       act(() => {
         result.current.handleAmount('20000');
@@ -42,7 +42,7 @@ describe('useHome', () => {
 
   describe('handleReachDate', () => {
     it('should change date value', () => {
-      const { result } = renderHook(() => useHome());
+      const { result } = renderHook(() => useEdit());
 
       act(() => {
         result.current.handleReachDate(new Date(2022, 5, 1, 7));
@@ -56,7 +56,7 @@ describe('useHome', () => {
 
   describe('handleSubmit', () => {
     it('should submit values on alert', () => {
-      const { result } = renderHook(() => useHome());
+      const { result } = renderHook(() => useEdit());
 
       act(() => {
         result.current.handleSubmit();

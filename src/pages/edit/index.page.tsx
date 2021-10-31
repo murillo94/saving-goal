@@ -10,7 +10,7 @@ import {
   Inline,
 } from 'components';
 
-import { useHome } from 'containers';
+import { useEdit } from 'containers';
 
 import { styled } from 'theme';
 
@@ -60,7 +60,7 @@ const Home: NextPage = () => {
     handleAmount,
     handleReachDate,
     handleSubmit,
-  } = useHome();
+  } = useEdit();
 
   return (
     <Main>
